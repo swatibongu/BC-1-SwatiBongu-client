@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JPM STUDENT</title>
+</head>
+<body>
+    <h4>
+        STUDENTS LOG: <h4 id='name'></h4>
+    </h4>
+    <form>
+        <label for='stringinput'>
+            ENTER YOUR NAME:
+        </label >
+        <input type="string" id="stringinput" onchange="handleOnChange" ><br><br>
+        
+        <label for='stringinput'>
+            ENTER YOUR COLLEGE NAME:
+        </label >
+        <input type="string" id="stringinput" onchange="handleOnChange" ><br><br>
+
+        <label for='valueinput'>
+            ENTER YOUR PASSING YEAR:
+        </label >
+        <input type="value" id="valueinput" onchange="handleOnChange" ><br><br>
+        
+        <label for='valueinput'>
+            ENTER YOUR CONTACT NUMBER:
+        </label >
+        <input type="value" id="valueinput" onchange="handleOnChange" ><br><br>
+        
+        <label for='stringinput'>
+            ENTER YOUR EMAIL ID:
+        </label ><input type="string" id="stringinput" onchange="handleOnChange" ><br><br>
+        
+        
+        
+        <button id='stringbtn' type="button" onclick="handleOnSubmit" >
+            Update Details
+        </button >
+    </form><BR><BR><script>
+
+        function display_ct5() {
+        var x = new Date()
+        var ampm = x.getHours( ) >= 12 ? ' PM' : ' AM';
+        
+        var x1=x.getMonth() + 1+ "/" + x.getDate() + "/" + x.getFullYear(); 
+        x1 = x1 + " - " +  x.getHours( )+ ":" +  x.getMinutes() + ":" +  x.getSeconds() + ":" + ampm;
+        document.getElementById('ct5').innerHTML = x1;
+        display_c5();
+         }
+         function display_c5(){
+        var refresh=1000; // Refresh rate in milli seconds
+        mytime=setTimeout('display_ct5()',refresh)
+        }
+        display_c5()
+        </script>
+        <span id='ct5' style="background-color: #FFFF00"></span>
+
+    <script type="text/javascript" src="artifacts/index.js" ></script>
+    <script type="text/javascript" src="node_modules/web3/dist/web3.min.js" ></script>
+    <script type="text/javascript" src="index.js" ></script>
+</body>
+</html>
